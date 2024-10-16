@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Enlace a la hoja de estilo de Font Awesome para los íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Enlace a la hoja de estilos personalizada -->
+    <link rel="stylesheet" href="/ProyectoU3/css/style.css">
+    <title>Dashboard Responsivo</title>
+</head>
+<body>
+    <!-- Contenedor para efectos de partículas en el fondo -->
+    <div class="particles"></div>
+    
+    <!-- Barra de herramientas superior con el título y el botón de menú -->
+    <div class="toolbar">
+        <span class="hamburger" onclick="toggleSidebar()">&#9776;</span>
+        <span class="title" id="dashboard-title">Inicio</span>
+    </div>
+
+    <!-- Barra lateral de navegación con enlaces a las diferentes secciones -->
+    <div class="sidebar" id="sidebar">
+        <a href="#" onclick="showSection('home')"><i class="fas fa-home"></i><span>Inicio</span></a>
+        <a href="#" onclick="showSection('services')"><i class="fas fa-concierge-bell"></i><span>Servicios</span></a>
+        <a href="#" onclick="showSection('about')"><i class="fas fa-users"></i><span>Sobre Mi</span></a>
+        <a href="#" onclick="showSection('contact')"><i class="fas fa-envelope"></i><span>Contacto</span></a>
+    </div>
+
+    <!-- Contenedor principal que alberga las secciones del dashboard -->
+    <div class="main-content" id="main-content">
+        <!-- Sección de Inicio -->
+        <div id="home" class="section">
+            <h1 id="titulo-inicio">¡Bienvenido!</h1>
+            <div class="welcome-container" id="inicio-container">
+                <div class="decorative-border"></div>
+                <div class="message-container">
+                    <p id="mensaje-inicio">¡Este es tu punto de inicio hacia grandes cosas! Prepárate para explorar y descubrir nuevas oportunidades. ¡Tu aventura comienza aquí!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección de Servicios -->
+        <div id="services" class="section hidden">
+            <div class="card-container">
+                <!-- Tarjetas para los diferentes servicios -->
+                <div class="card"><a href="#" onclick="openModal('/ProyectoU3/img/proyectos/index.html')">
+                    <img src="/ProyectoU3/img/proyectos/logos/calculadora.jpg" alt="Calculadora">
+                    <br>
+                    Calculadora</a></div>
+                <div class="card"><a href="#" onclick="openModal('/ProyectoU3/img/proyectos/actividad6.html')">
+                    <img src="/ProyectoU3/img/proyectos/logos/cambioima.jpg" alt="Cambio de Imagen">
+                    <br>
+                    CambioImagen</a></div>
+                <div class="card"><a href="#" onclick="openModal('/ProyectoU3/img/proyectos/contadorP.html')">
+                    <img src="/ProyectoU3/img/proyectos/logos/contadorpalabras.jpg" alt="Contador de Palabras">
+                    <br>
+                    ContadorPalabras</a></div>
+                <div class="card"><a href="#" onclick="openModal('/ProyectoU3/img/proyectos/actividad5.html')">
+                    <img src="/ProyectoU3/img/proyectos/logos/contadorarab.jpg" alt="Contador Arriba Abajo">
+                    <br>
+                    ContadorArribaAbajo</a></div>
+                <div class="card"><a href="#" onclick="openModal('/ProyectoU3/img/proyectos/convertidorU.html')">
+                    <img src="/ProyectoU3/img/proyectos/logos/unidades.jpg" alt="Convertidor de Unidades">
+                    <br>
+                    Convertidor</a></div>
+                <div class="card"><a href="#" onclick="openModal('/ProyectoU3/img/proyectos/actividad9.html')">
+                    <img src="/ProyectoU3/img/proyectos/logos/cronometro.jpg" alt="Cronómetro">
+                    <br>
+                    Cronometro</a></div>
+                <div class="card"><a href="#" onclick="openModal('https://l21660166.github.io/FiltroBusqueda/')">
+                    <img src="/ProyectoU3/img/proyectos/logos/filtroB.jpg" alt="Filtro de Búsqueda">
+                    <br>
+                    FiltroBusqueda</a></div>
+                <div class="card"><a href="#" onclick="openModal('/ProyectoU3/img/proyectos/actividad1A.html')">
+                    <img src="/ProyectoU3/img/proyectos/logos/GaleriaApi.jpg" alt="Galería API">
+                    <br>
+                    GaleriaAPI</a></div>
+                <div class="card"><a href="#" onclick="openModal('https://l21660166.github.io/GaleriaModal/')">
+                    <img src="/ProyectoU3/img/proyectos/logos/GaleriaMod.jpg" alt="Galería Modal">
+                    <br>
+                    GaleriaModal</a></div>
+                <div class="card"><a href="#" onclick="openModal('https://l21660166.github.io/Notas/')">
+                    <img src="/ProyectoU3/img/proyectos/logos/notas.jpg" alt="Notas">
+                    <br>
+                    Notas</a></div>
+                <div class="card"><a href="#" onclick="openModal('https://l21660166.github.io/PiedraPapelTijera/')">
+                    <img src="/ProyectoU3/img/proyectos/logos/piedr,papelytijera.jpg" alt="Piedra, Papel o Tijera">
+                    <br>
+                    PiedraPapelTijera</a></div>
+                <div class="card"><a href="#" onclick="openModal('/ProyectoU3/img/proyectos/actividad4.html')">
+                    <img src="/ProyectoU3/img/proyectos/logos/suma (2).png" alt="Suma">
+                    <br>
+                    Suma</a></div>
+                <div class="card"><a href="#" onclick="openModal('/ProyectoU3/img/proyectos/actividad7.html')">
+                    <img src="/ProyectoU3/img/proyectos/logos/temporizador.jpg" alt="Temporizador">
+                    <br>
+                    Temporizador</a></div>
+                <div class="card"><a href="#" onclick="openModal('/ProyectoU3/img/proyectos/notasapp.html')">
+                    <img src="/ProyectoU3/img/proyectos/logos/to-do-list.jpg" alt="Lista de Tareas">
+                    <br>
+                    To-Do-List</a></div>
+                <div class="card"><a href="#" onclick="openModal('/ProyectoU3/img/proyectos/mensaje.html')">
+                    <img src="/ProyectoU3/img/proyectos/logos/mensaje.jpg" alt="Mensaje">
+                    <br>
+                    Mensaje</a></div>
+                <div class="card"><a href="#" onclick="openModal('/ProyectoU3/img/proyectos/actividad2.html')">
+                    <img src="/ProyectoU3/img/proyectos/logos/cambiarcolor.jpg" alt="Cambiar Color">
+                    <br>
+                    Cambiar Color</a></div>
+                <div class="card"><a href="#" onclick="openModal('/ProyectoU3/img/proyectos/actividad3.html')">
+                    <img src="/ProyectoU3/img/proyectos/logos/form.png" alt="Formulario">
+                    <br>
+                    Formulario</a></div>
+            </div>
+        </div>
+
+        <!-- Sección Sobre Mi -->
+        <div id="about" class="section hidden">
+            <div class="decorative-border"></div>
+            <div class="message-container">
+                <p id="mensaje-inicio">¡Bienvenido a la sección de Acerca de! Soy Tomas Moreno, estudiante de Ingeniería en Sistemas Computacionales. Este es un proyecto de la materia de Programación Web, y el tema que estoy abordando es la programación del lado del cliente. A través de este espacio, quiero compartir lo aprendido. ¡Explora y descubre más sobre este proyectos!</p>
+            </div>
+        </div>
+
+        <!-- Sección de Contacto -->
+        <div id="contact" class="section hidden">
+            <div class="decorative-border"></div>
+            <div class="message-container">
+                <p id="mensaje-inicio">¡Estás en la sección de Contacto! Si deseas ponerte en contacto conmigo, puedes hacerlo a través de las siguientes vías:</p>
+                <ul>
+                    <li>Email: alexmg@gmail.com</li>
+                    <li>Teléfono: 4881429879</li>
+                    <li>Redes Sociales: [enlaces a tus perfiles de redes sociales]</li>
+                </ul>
+                <p>¡Espero saber de ti pronto!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para mostrar contenido adicional -->
+    <!-- Modal para mostrar contenido adicional -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <iframe id="modal-iframe" class="modal-iframe" src="" title="Modal Content"></iframe>
+        </div>
+    </div>
+
+
+    <!-- Barra de pie de página con información de derechos de autor -->
+    <div class="footer-toolbar">
+        <span>© 2024 - Programacion Web</span>
+    </div>
+
+    <!-- Enlace al archivo JavaScript que maneja la lógica del dashboard -->
+    <script src="/ProyectoU3/Javascript/main.js"></script> 
+</body>
+</html>
